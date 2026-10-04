@@ -35,7 +35,13 @@ You need one of these:
 - **Custom** — describe what to highlight, such as "sentences with statistics".
 
 After a run, a small panel on the page has a slider to raise or lower the cut-off, a Stop button, and
-a button to clear the highlights.
+a button to clear the highlights. If a run stops, hits its limit or fails, the panel offers
+**Run again**.
+
+**Pages that load as you scroll** (a PDF open in a web viewer, infinite feeds): a run keeps following
+the page and scores new text as it appears. Text the page draws again is repainted from scores the
+extension already has, with no new requests. With Jev, following only happens on sites where you chose
+**Always on this site**.
 
 ## Privacy
 
@@ -51,5 +57,6 @@ a button to clear the highlights.
 
 ## Limits
 
-Up to 600 sentences per run. Text inside iframes is not read, and content a page adds after a run
-(infinite scroll) is not scored until you run again.
+Up to 600 sentences per run, counting text that appears while the run follows the page; **Run again**
+continues from what's on screen. A web PDF viewer only exposes the text of pages it has drawn, so that
+is all that can be highlighted. Text inside iframes is not read.
